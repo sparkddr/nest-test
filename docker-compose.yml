@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dev-db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: manombasededonnees
+    ports:
+      - "5432:5432"
+    networks:
+      - mon_reseau
+networks:
+  mon_reseau: 
+
